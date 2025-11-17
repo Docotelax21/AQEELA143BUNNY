@@ -1,46 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reasons Why I Love You</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aqeelah — 143 Reasons</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="topbar">
+    <a class="navlink" href="index.html">Home</a>
+    <a class="navlink active" href="143.html">143 Reasons</a>
+    <a class="navlink" href="openwhen.html">Open-When</a>
+  </header>
 
-<h1 class="title">Reasons Why I Love You ❤️</h1>
+  <main class="container">
+    <h1 class="page-title">143 Reasons I Love You, Aqeelah</h1>
+    <p class="hint">Tap or click any heart to reveal the reason. Tap again to hide.</p>
 
-<div class="hearts-container">
+    <div class="controls">
+      <button id="revealRandom" class="btn">Reveal random</button>
+      <button id="resetHearts" class="btn ghost">Reset</button>
+    </div>
 
-  <div class="heart" onclick="toggleMessage(this)">
-    ❤️
-    <p class="hidden-message">You make every day feel peaceful and safe for me.</p>
-  </div>
+    <div id="heartsGrid" class="hearts-grid" aria-label="143 hearts"></div>
+  </main>
 
-  <div class="heart" onclick="toggleMessage(this)">
-    ❤️
-    <p class="hidden-message">Your presence alone calms my whole soul.</p>
-  </div>
-
-  <div class="heart" onclick="toggleMessage(this)">
-    ❤️
-    <p class="hidden-message">I love how good, soft and genuine your heart is.</p>
-  </div>
-
-  <div class="heart" onclick="toggleMessage(this)">
-    ❤️
-    <p class="hidden-message">I love the way you love — pure and wholehearted.</p>
-  </div>
-
-  <div class="heart" onclick="toggleMessage(this)">
-    ❤️
-    <p class="hidden-message">You’re my comfort person. My peace. My home.</p>
-  </div>
-
-</div>
-
-<a href="index.html" class="back-btn">↩ Back</a>
-
-<script src="script.js?v=3"></script>
+  <script src="script.js"></script>
 </body>
 </html>
