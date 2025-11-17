@@ -46,3 +46,38 @@ a.navlink.active{color:var(--bg);background:var(--accent);box-shadow:0 6px 24px 
 
 /* responsive */
 @media (max-width:640px){.hearts-grid{grid-template-columns:repeat(6,1fr)}.nav{justify-content:center}}
+.open-display {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border: 1px solid gold;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.55);
+    box-shadow: 0 0 15px rgba(255,215,0,0.3);
+}
+
+.button-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.open-btn {
+    padding: 12px;
+    background: black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.open-btn:hover {
+    background: gold;
+    color: black;
+}
