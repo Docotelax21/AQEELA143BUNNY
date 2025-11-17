@@ -63,18 +63,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   });
 
-  // openwhen letters
-  document.querySelectorAll('.open-btn').forEach(b=>{
-    b.addEventListener('click', ()=>{
-      const key = b.getAttribute('data-key');
-      const dataEl = document.getElementById('openWhenData');
-      if(!dataEl) return;
-      let obj = {};
-      try{ obj = JSON.parse(dataEl.textContent); }catch(e){ obj = {}; }
-      const out = document.getElementById('openDisplay');
-      if(out) out.textContent = obj[key] || '';
-    });
-  });
+ // -------------------- OPEN WHEN --------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const openWhenDataEl = document.getElementById("openWhenData");
+    const openDisplay = document.getElementById("openDisplay");
+
+    if (openWhenDataEl && openDisplay) {
+        let openWhenObj = {};
+
+        try {
+            openWhenObj = JSON.parse(openWhenDataEl.textContent);
+        } catch (e) {
+            console.error("Error parsing Open-When JSON:", e);
+        }
+
+        document.querySelectorAll(".open-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const key = button.getAttribute("data-key");
+                openDisplay.textContent = openWhenObj[key] || "No message found.";
+            });
+        });
+    }
+});
+
 
   // quiz submit simple scoring
   const quizForm = document.getElementById('quizForm');
