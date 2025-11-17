@@ -1,45 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open When...</title>
-  <link rel="stylesheet" href="styles.css?v=3">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aqeelah — Open When</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="topbar">
+    <a class="navlink" href="index.html">Home</a>
+    <a class="navlink" href="143.html">143 Reasons</a>
+    <a class="navlink active" href="openwhen.html">Open-When</a>
+  </header>
 
-<h1 class="title">Open When... 💌</h1>
+  <main class="container">
+    <h1 class="page-title">Open-When Letters — Aqeelah</h1>
+    <p class="hint">Tap a button to reveal a short letter to cheer you up.</p>
 
-<div class="letter" onclick="openLetter(this)">
-  <div class="letter-title">Open When You Feel Lonely</div>
-  <div class="letter-body">
-    My baby, you’re never alone. You have me — always.  
-  </div>
-</div>
+    <div class="open-buttons">
+      <button class="open-btn" data-key="sad">Open when you're sad</button>
+      <button class="open-btn" data-key="lonely">Open when you're lonely</button>
+      <button class="open-btn" data-key="miss">Open when you miss me</button>
+      <button class="open-btn" data-key="doubt">Open when you doubt yourself</button>
+      <button class="open-btn" data-key="sleep">Open when you can't sleep</button>
+      <button class="open-btn" data-key="stressed">Open when you're stressed</button>
+      <button class="open-btn" data-key="smile">Open when you need a smile</button>
+    </div>
 
-<div class="letter" onclick="openLetter(this)">
-  <div class="letter-title">Open When You're Stressed</div>
-  <div class="letter-body">
-    Breathe, my love. You are stronger than everything in front of you.
-  </div>
-</div>
+    <div id="openDisplay" class="open-display" aria-live="polite"></div>
+  </main>
 
-<div class="letter" onclick="openLetter(this)">
-  <div class="letter-title">Open When You Can't Sleep</div>
-  <div class="letter-body">
-    Close your eyes, think of me holding you, and let that softness settle your mind.
-  </div>
-</div>
-
-<div class="letter" onclick="openLetter(this)">
-  <div class="letter-title">Open When You Miss Me</div>
-  <div class="letter-body">
-    I’m always with you — in your thoughts, your heart, your world.
-  </div>
-</div>
-
-<a href="index.html" class="back-btn">↩ Back</a>
-
-<script src="script.js?v=3"></script>
+  <script src="script.js"></script>
 </body>
 </html>
