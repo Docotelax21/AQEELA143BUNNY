@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open When – For My Bunny</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open When...</title>
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
+<body>
 
-<body class="page">
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="143.html">143</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="shake.html">Shake</a>
-        <a href="openwhen.html" class="active">Open-When</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="polaroid.html">Polaroids</a>
-        <a href="gift.html">Gift</a>
-        <a href="missme.html">Miss Me</a>
-    </div>
+<h1 class="title">Open When... 💌</h1>
 
-    <h1 class="title">💌 Open When Letters</h1>
-    <p class="subtitle">Tap any button below and your message will appear.</p>
+<div class="letter" onclick="openLetter(this)">
+  <div class="letter-title">Open When You Feel Lonely</div>
+  <div class="letter-body">
+    My baby, you’re never alone. You have me — always.  
+  </div>
+</div>
 
-    <!-- THE IMPORTANT JSON -->
-    <script id="openWhenData" type="application/json">
-    {
-        "sad": "My baby… you’re stronger than you think. I know things get heavy, but I’m holding your hand through all of it. Lean on me, cry with me, breathe with me. You’re never alone.",
-        "lonely": "If you’re feeling lonely, close your eyes for 5 seconds... think about my arms around you, my voice, my warmth. I’m with you even when I’m not physically next to you.",
-        "missme": "I miss you more than you think. More than I show. More than I say. And the second I see you again, I’m hugging you first.",
-        "doubt": "Baby, you are magic. You are capable. You are intelligent. You are powerful. Don’t doubt yourself — the world hasn’t even seen half your greatness yet.",
-        "cantSleep": "If you can’t sleep, rest your mind on me. Picture us cuddling, your head on my chest, my fingers brushing your hair… breathe slow, my love.",
-        "stressed": "Breathe baby… slow… slow… again… You’re going to get through this. I’m proud of how hard you try, even when you feel overwhelmed.",
-        "smile": "Here’s your smile: 😘🤍 You’re the most beautiful person I know — inside and out."
-    }
-    </script>
+<div class="letter" onclick="openLetter(this)">
+  <div class="letter-title">Open When You're Stressed</div>
+  <div class="letter-body">
+    Breathe, my love. You are stronger than everything in front of you.
+  </div>
+</div>
 
-    <div class="button-wrap">
-        <button class="open-btn" data-key="sad">Open when you're sad</button>
-        <button class="open-btn" data-key="lonely">Open when you're lonely</button>
-        <button class="open-btn" data-key="missme">Open when you miss me</button>
-        <button class="open-btn" data-key="doubt">Open when you doubt yourself</button>
-        <button class="open-btn" data-key="cantSleep">Open when you can't sleep</button>
-        <button class="open-btn" data-key="stressed">Open when you're stressed</button>
-        <button class="open-btn" data-key="smile">Open when you need a smile</button>
-    </div>
+<div class="letter" onclick="openLetter(this)">
+  <div class="letter-title">Open When You Can't Sleep</div>
+  <div class="letter-body">
+    Close your eyes, think of me holding you, and let that softness settle your mind.
+  </div>
+</div>
 
-    <div id="openDisplay" class="open-display"></div>
+<div class="letter" onclick="openLetter(this)">
+  <div class="letter-title">Open When You Miss Me</div>
+  <div class="letter-body">
+    I’m always with you — in your thoughts, your heart, your world.
+  </div>
+</div>
 
-    <script src="script.js"></script>
+<a href="index.html" class="back-btn">↩ Back</a>
+
+<script src="script.js?v=3"></script>
 </body>
 </html>
