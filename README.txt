@@ -1,0 +1,1 @@
+Full multi-page Black & Gold birthday site. Upload all files/folders in root of GitHub repo and enable Pages.

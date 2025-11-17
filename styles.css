@@ -1,0 +1,48 @@
+
+:root{
+  --bg:#070707; --card:#0f0f0f; --accent:#d4af37; --muted:#bfb8a6; --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,var(--bg),#0b0b0b);color:#fff;min-height:100vh}
+.container{max-width:980px;margin:24px auto;padding:18px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:700;letter-spacing:1px;color:var(--accent);font-size:18px}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+a.navlink{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+a.navlink.active{color:var(--bg);background:var(--accent);box-shadow:0 6px 24px rgba(212,175,55,0.12);transform:translateY(-2px)}
+.section{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:16px;border-radius:12px;margin-top:18px;border:1px solid rgba(255,255,255,0.02)}
+.h1{font-size:22px;margin:0 0 8px 0;color:var(--accent)}
+.hint{color:var(--muted);font-size:14px}
+.footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding:12px}
+
+/* hearts grid */
+.hearts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:10px}
+.heart{background:linear-gradient(180deg,#120f10,#090708);border-radius:12px;position:relative;padding-top:100%;cursor:pointer;border:1px solid rgba(255,255,255,0.02);overflow:hidden;transition:transform .18s}
+.heart:hover{transform:translateY(-6px)}
+.heart .inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:8px}
+.shape{font-size:22px;color:var(--accent)}
+.heart .msg{display:none;font-size:13px;color:#efe9d8;text-align:center;padding:8px}
+.heart.revealed{background:linear-gradient(180deg,#2b1b00,#1a1200);border:2px solid rgba(212,175,55,0.95)}
+.heart.revealed .shape{display:none}
+.heart.revealed .msg{display:block}
+
+/* polaroids */
+.polaroid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.polaroid{background:linear-gradient(180deg,#f8f5f0,#efe9e0);padding:10px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;min-height:160px;position:relative;color:#111}
+.polaroid img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+/* small utilities */
+.controls{display:flex;gap:8px;margin-top:12px}
+.button{padding:8px 12px;border-radius:8px;border:0;background:var(--accent);color:#14110d;cursor:pointer}
+.small-card{background:var(--card);padding:12px;border-radius:10px;color:var(--muted)}
+
+/* gift box */
+.box{width:120px;height:120px;position:relative;margin:12px auto}
+.lid{position:absolute;left:0;right:0;top:0;height:36px;background:linear-gradient(180deg,#ffd966,#c89b2f);border-radius:8px;transition:all .6s}
+.base{position:absolute;left:10px;right:10px;bottom:0;height:84px;background:linear-gradient(180deg,#f8f2d1,#e9dca1);border-radius:8px}
+.gift.open .lid{transform:translateY(-60px) rotate(-12deg)}
+.gift-reveal{opacity:0;transform:translateY(-8px);transition:all .6s;color:#111;background:var(--accent);padding:8px;border-radius:8px;margin-top:8px;display:inline-block}
+.gift.open .gift-reveal{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:640px){.hearts-grid{grid-template-columns:repeat(6,1fr)}.nav{justify-content:center}}
